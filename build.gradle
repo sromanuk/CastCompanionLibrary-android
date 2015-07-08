@@ -41,14 +41,6 @@ android {
         minSdkVersion 10
         targetSdkVersion 22
     }
-
-    sourceSets {
-        main {
-            manifest.srcFile 'AndroidManifest.xml'
-            java.srcDirs = ['src']
-            res.srcDirs = ['res']
-        }
-    }
 }
 
 dependencies {
