@@ -16,7 +16,18 @@
 
 package com.google.android.libraries.cast.companionlibrary.cast.dialog.video;
 
-import static com.google.android.libraries.cast.companionlibrary.utils.LogUtils.LOGE;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v7.app.MediaRouteControllerDialog;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.google.android.gms.cast.MediaInfo;
 import com.google.android.gms.cast.MediaMetadata;
@@ -30,18 +41,7 @@ import com.google.android.libraries.cast.companionlibrary.cast.exceptions.Transi
 import com.google.android.libraries.cast.companionlibrary.utils.FetchBitmapTask;
 import com.google.android.libraries.cast.companionlibrary.utils.LogUtils;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.os.Bundle;
-import android.support.v7.app.MediaRouteControllerDialog;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
+import static com.google.android.libraries.cast.companionlibrary.utils.LogUtils.LOGE;
 
 /**
  * A custom {@link MediaRouteControllerDialog} that provides an album art, a play/pause button and

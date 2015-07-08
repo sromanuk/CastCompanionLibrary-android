@@ -16,9 +16,9 @@
 
 package com.google.android.libraries.cast.companionlibrary.cast.player;
 
-import com.google.android.gms.cast.MediaStatus;
-
 import android.graphics.Bitmap;
+
+import com.google.android.gms.cast.MediaStatus;
 
 /**
  * An interface that can be used to display a remote controller for the video that is playing on

@@ -16,11 +16,11 @@
 
 package com.google.android.libraries.cast.companionlibrary.cast.callbacks;
 
+import android.view.View;
+
 import com.google.android.gms.cast.ApplicationMetadata;
 import com.google.android.gms.cast.MediaQueueItem;
 import com.google.android.gms.cast.TextTrackStyle;
-
-import android.view.View;
 
 import java.util.List;
 import java.util.Locale;

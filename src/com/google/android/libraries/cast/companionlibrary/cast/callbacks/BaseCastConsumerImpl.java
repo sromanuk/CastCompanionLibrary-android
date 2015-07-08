@@ -16,10 +16,10 @@
 
 package com.google.android.libraries.cast.companionlibrary.cast.callbacks;
 
+import android.support.v7.media.MediaRouter.RouteInfo;
+
 import com.google.android.gms.cast.CastDevice;
 import com.google.android.gms.common.ConnectionResult;
-
-import android.support.v7.media.MediaRouter.RouteInfo;
 
 /**
  * A no-op implementation of the {@link BaseCastConsumer}

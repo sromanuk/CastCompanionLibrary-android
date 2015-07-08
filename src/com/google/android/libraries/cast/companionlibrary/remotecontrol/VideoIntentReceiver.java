@@ -16,8 +16,10 @@
 
 package com.google.android.libraries.cast.companionlibrary.remotecontrol;
 
-import static com.google.android.libraries.cast.companionlibrary.utils.LogUtils.LOGD;
-import static com.google.android.libraries.cast.companionlibrary.utils.LogUtils.LOGE;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.view.KeyEvent;
 
 import com.google.android.libraries.cast.companionlibrary.cast.VideoCastManager;
 import com.google.android.libraries.cast.companionlibrary.cast.exceptions.CastException;
@@ -26,10 +28,8 @@ import com.google.android.libraries.cast.companionlibrary.cast.exceptions.Transi
 import com.google.android.libraries.cast.companionlibrary.notification.VideoCastNotificationService;
 import com.google.android.libraries.cast.companionlibrary.utils.LogUtils;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.view.KeyEvent;
+import static com.google.android.libraries.cast.companionlibrary.utils.LogUtils.LOGD;
+import static com.google.android.libraries.cast.companionlibrary.utils.LogUtils.LOGE;
 
 /**
  * A {@link BroadcastReceiver} for receiving media button actions (from the lock screen) as well as

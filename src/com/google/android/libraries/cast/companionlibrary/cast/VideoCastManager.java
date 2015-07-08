@@ -16,8 +16,28 @@
 
 package com.google.android.libraries.cast.companionlibrary.cast;
 
-import static com.google.android.libraries.cast.companionlibrary.utils.LogUtils.LOGD;
-import static com.google.android.libraries.cast.companionlibrary.utils.LogUtils.LOGE;
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
+import android.app.PendingIntent;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.Resources.NotFoundException;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.AudioManager;
+import android.media.MediaMetadataRetriever;
+import android.media.RemoteControlClient;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.preference.PreferenceScreen;
+import android.support.v7.app.MediaRouteDialogFactory;
+import android.support.v7.media.MediaRouter.RouteInfo;
+import android.text.TextUtils;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.accessibility.CaptioningManager;
 
 import com.google.android.gms.cast.ApplicationMetadata;
 import com.google.android.gms.cast.Cast;
@@ -62,29 +82,6 @@ import com.google.android.libraries.cast.companionlibrary.widgets.IMiniControlle
 import com.google.android.libraries.cast.companionlibrary.widgets.MiniController;
 import com.google.android.libraries.cast.companionlibrary.widgets.MiniController.OnMiniControllerChangedListener;
 
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
-import android.app.PendingIntent;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.Resources.NotFoundException;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.media.AudioManager;
-import android.media.MediaMetadataRetriever;
-import android.media.RemoteControlClient;
-import android.net.Uri;
-import android.os.Build;
-import android.os.Bundle;
-import android.preference.PreferenceScreen;
-import android.support.v7.app.MediaRouteDialogFactory;
-import android.support.v7.media.MediaRouter.RouteInfo;
-import android.text.TextUtils;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.accessibility.CaptioningManager;
-
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -98,6 +95,9 @@ import java.util.TimerTask;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.TimeUnit;
+
+import static com.google.android.libraries.cast.companionlibrary.utils.LogUtils.LOGD;
+import static com.google.android.libraries.cast.companionlibrary.utils.LogUtils.LOGE;
 
 /**
  * An abstract subclass of {@link BaseCastManager} that is suitable for casting video contents (it

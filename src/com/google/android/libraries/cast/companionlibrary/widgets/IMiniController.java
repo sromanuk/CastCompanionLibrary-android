@@ -16,13 +16,13 @@
 
 package com.google.android.libraries.cast.companionlibrary.widgets;
 
+import android.graphics.Bitmap;
+import android.net.Uri;
+
 import com.google.android.gms.cast.MediaInfo;
 import com.google.android.gms.cast.MediaQueueItem;
 import com.google.android.gms.cast.MediaStatus;
 import com.google.android.libraries.cast.companionlibrary.widgets.MiniController.OnMiniControllerChangedListener;
-
-import android.graphics.Bitmap;
-import android.net.Uri;
 
 /**
  * An interface to abstract {@link MiniController} so that other components can also control the
